@@ -26,6 +26,8 @@ Then install the required package:
 pip install exifread
 ```
 
+### Usage 
+
 **Move the Image_sort.exe** into any folder with images and videos and double click the program.
 
 The code then sortes all the images and videos into year and month folders for you.  
