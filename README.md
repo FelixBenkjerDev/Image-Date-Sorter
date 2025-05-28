@@ -76,8 +76,8 @@ into ⬇️
 
 If you make any changes to the code and want to make it an executable use
 ``` Bash
-cd path\to\the\script
 pip install pyinstaller
+cd path\to\the\script
 pyinstaller --onefile Image_Sort.py
 ```
 
