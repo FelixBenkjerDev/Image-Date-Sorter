@@ -43,12 +43,12 @@ The code then sortes all the images and videos into year and month folders for y
 into ⬇️
 ```yaml
 📂 2023
-   📂 January
-   📂 February
-   📂 March
+   📂 January 2023
+   📂 February 2023
+   📂 March 2023
 📂 2024
-   📂 January
-   📂 February
+   📂 January 2024
+   📂 February 2024 
 🤖 Image_sort.exe
 ```
 You can **keep the program in the folder** and when **new photos and or videos are added run the program** again and it will sort it into the exsisting folders again.  
@@ -56,8 +56,8 @@ You can **keep the program in the folder** and when **new photos and or videos a
 ```yaml
 [...]
 📂 2024
-   📂 January
-   📂 February
+   📂 January 2024
+   📂 February 2024
 🤖 Image_sort.exe
 🖼️ 20240122_9521
 🖼️ 20240213_2131
@@ -67,8 +67,8 @@ into ⬇️
 ```yaml
 [...]
 📂 2024
-   📂 January
-   📂 February
+   📂 January 2024
+   📂 February 2024
 🤖 Image_sort.exe
 ```
 
