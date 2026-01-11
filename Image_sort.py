@@ -4,7 +4,7 @@ import locale
 from datetime import datetime
 import exifread
 
-# Set locale to the system default language
+# Use system default language for month names
 locale.setlocale(locale.LC_TIME, '')
 
 def get_creation_date(image_path):
@@ -15,7 +15,6 @@ def get_creation_date(image_path):
             date_str = str(tags[date_tag])
             return datetime.strptime(date_str, '%Y:%m:%d %H:%M:%S')
         else:
-            # If EXIF date is not available, use file modification time
             return datetime.fromtimestamp(os.path.getmtime(image_path))
 
 def sort_images(source_folder, destination_folder):
@@ -23,17 +22,18 @@ def sort_images(source_folder, destination_folder):
         if filename.lower().endswith(('.png', '.jpg', '.jpeg')):
             source_path = os.path.join(source_folder, filename)
             creation_date = get_creation_date(source_path)
-            
-            # Get month name in system language and capitalize it
-            month_name = creation_date.strftime('%B').capitalize()  
 
-            year_folder = os.path.join(destination_folder, str(creation_date.year))
-            month_folder = os.path.join(year_folder, month_name)
-            
-            # Create folders if they don't exist
+            year = creation_date.year
+            month_name = creation_date.strftime('%B').capitalize()
+
+            # Month folder includes year
+            month_folder_name = f"{month_name} {year}"
+
+            year_folder = os.path.join(destination_folder, str(year))
+            month_folder = os.path.join(year_folder, month_folder_name)
+
             os.makedirs(month_folder, exist_ok=True)
 
-            # Move the image to the corresponding folder
             destination_path = os.path.join(month_folder, filename)
             shutil.move(source_path, destination_path)
 

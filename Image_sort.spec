@@ -2,7 +2,7 @@
 
 
 a = Analysis(
-    ['Image_sort.py'],
+    ['Image_Sort.py'],
     pathex=[],
     binaries=[],
     datas=[],
@@ -22,7 +22,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='Image_sort',
+    name='Image_Sort',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
